@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS - Institute Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            background-color: #001730;
+        }
+
+        #container {
+            width: 80%;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 50px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #4ad7d1;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        select {
+            height: 40px;
+        }
+
+        button {
+            background-color: #4285f4;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* button:hover {
+            background-color: #45a049;
+        } */
+      h1{
+        text-align: center;
+            margin-bottom: 20px;
+      }
+        .view-button {
+            background-color: #4285f4;
+        }
+
+        .view-button:hover {
+            background-color:#4285f4;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color:#ff5722">NEXUS - Student Portal</h1>
+    <div id="container">
+        
+        <form action="upload_project.php" method="post" enctype="multipart/form-data">
+            <label for="projectTitle">Project Title:</label>
+            <input type="text" id="projectTitle" name="projectTitle" required>
+
+            <label for="projectDescription">Project Description:</label>
+            <textarea id="projectDescription" name="projectDescription" rows="4" required></textarea>
+
+            <label for="projectDomain">Project Domain:</label>
+            <select id="projectDomain" name="projectDomain" required>
+                <option value="Miscellaneous">Miscellaneous</option>
+                <option value="SmartEducation">Smart Education</option>
+                <option value="BlockchainCybersecurity">Blockchain & Cybersecurity</option>
+                <option value="Clean & Green Technology">Clean & Green Technology</option>
+                <option value="Blockchain & Cybersecurity">Blockchain & Cybersecurity</option>
+                <option value="Disaster Management">Disaster Management</option>
+                <option value="Agriculture FoodTech & Rural Development">Agriculture FoodTech & Rural Development</option>
+                <option value="Transportation & Logistics">Transportation & Logistics</option>
+                <option value="Renewable / Sustainable Energy">Renewable / Sustainable Energy</option>
+                <option value="Robotics and Drones">Robotics and Drones</option>
+                <option value="MedTech / BioTech / HealthTech">MedTech / BioTech / HealthTech</option>
+                <option value="Smart Automation">Smart Automation</option>
+                <option value="Smart Vehicles">Smart Vehicles</option>
+
+            </select>
+
+            <label for="projectCategory">Project Category:</label>
+            <select id="projectCategory" name="projectCategory" required>
+                <option value="Hardware">Hardware</option>
+                <option value="Software">Software</option>
+            </select>
+
+            <label for="fileUpload">Add File:</label>
+            <input type="file" id="fileUpload" name="fileUpload" accept=".docx, .pdf, .doc" required>
+
+            <button type="submit">Upload Project</button><br><br>
+        </form>
+
+        <button class="view-button" onclick="viewProjects()">View Uploaded Projects</button>
+    </div>
+
+    <script>
+        function viewProjects() {
+            // Add logic to navigate to the page displaying uploaded projects
+            alert("Viewing uploaded projects");
+        }
+    </script>
+
+</body>
+
+</html>

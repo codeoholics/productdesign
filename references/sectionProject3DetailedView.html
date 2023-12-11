@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" type="text/css" href="styles1.css">
+
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <title>Project 3 Details</title>
+</head>
+<body>
+<div class="bg-container">
+
+    <div class="DetailedView-container">
+        <!-- Project 3 Detailed View -->
+        <h1 class="DetailedView-heading">VIRTUAL  ART GALLERY</h1>
+        
+        <!-- Owl Carousel Container -->
+        <div class="Carousel-container owl-carousel">
+            <div class="item"><img src="https://tse3.mm.bing.net/th?id=OIP.W5zVo55yh6-4c8bLeISgAwHaE8&pid=Api&P=0&h=220" alt="Project 3 Image 1" style="width: 37%; height: 30%;"></div>
+            <div class="item"><img src="https://tse4.explicit.bing.net/th?id=OIP.gUaSJDKdxmM7qEa82arGFAHaEc&pid=Api&P=0&h=220" alt="Project 3 Image 2" style="width: 37%; height: 30%;"></div>
+            <!-- Add more items as needed -->
+        </div>
+
+        <p class="DetailedView-description">
+          A virtual platform that replicates the experience of visiting an art gallery, allowing users to explore and appreciate artworks from the comfort of their homes. The Virtual Art Gallery Experience can include 3D renditions of famous art galleries, allowing users to navigate through rooms and view high-resolution images of artworks. Implement features such as audio guides, artist biographies, and interactive elements to enhance the user experience. Artists could also have the option to showcase and sell their work through the platform. This project aims to bring art enthusiasts closer to the art world, fostering creativity and cultural appreciation in a digital environment.
+
+        </p>
+        
+        <p class="DetailedView-student-details">
+            <p class="DetailedView-student-details">Student: Student Name:Abcdef</p>
+            <p class="DetailedView-student-details">Student mail id :abcd@gmail.com</p>
+        </p>
+        
+        <button class="button" onclick="goBack()">Back</button>
+
+        <button class="btn btn-dark" >View Project</button>
+        
+        <button class="btn btn-dark" onclick="collaborate()">Collaborate</button>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            // Initialize Owl Carousel
+            $(".Carousel-container").owlCarousel({
+                items: 1,  // Number of items to display
+                loop: true, // Enable loop
+                autoplay: true, // Enable autoplay
+                autoplayTimeout: 3000, // Autoplay interval in milliseconds
+                nav: true, // Display navigation arrows
+                dots: true // Display navigation dots
+            });
+        });
+
+        function goBack() {
+            // Navigate back to the previous page
+            history.back();
+        }
+
+        function collaborate() {
+            // Implement collaboration logic here
+            alert("Collaborate button clicked!");
+        }
+    </script>
+</body>
+</html>

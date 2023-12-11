@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:#001730;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color:#4AD7D1;
+            color: #fff;
+        }
+
+        #profile {
+            max-width: 200px;
+            margin: 20px auto;
+            border-radius: 50%;
+            display: block;
+        }
+
+        #student-info {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #table-container {
+            margin: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        button {
+            background-color:#4285f4;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .files {
+            background-color:#4285f4;
+        }
+
+        #modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        #modal-content {
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Added styles for the new buttons */
+        #left-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        #right-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 style="color:black">Student-Profile</h1>
+        <!-- Home button -->
+        <button id="left-button" onclick="goToHomePage()">Home</button>
+        <!-- Upload Files button -->
+        <button id="right-button" onclick="openFileInput()">Upload Files</button>
+    </header>
+
+    <img id="profile" src="profile-image.jpg" alt="Profile Image" style="color:white">
+
+    <div id="student-info">
+        <h2 style="color:white"><span style="color:#ff5722">Student Name: </span> John Doe</h2>
+        <p style="color:white"><span style="color:#ff5722">College Name: </span>ABC University</p>
+        <p style="color:white"><span style="color:#ff5722">Description:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+
+    <div id="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th style="color:white">Student Name</th>
+                    <th style="color:white">Date Submitted</th>
+                    <th style="color:white">College Name</th>
+                    <th style="color:white">Project Name/Domain</th>
+                    <th style="color:white">Uploaded Files</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="color:white">John Doe</td>
+                    <td style="color:white">2023-12-09</td>
+                    <td style="color:white">ABC University</td>
+                    <td style="color:white">Web Development</td>
+                    <td><button onclick="openModal()" class="files" style="color:black">View Files</button></td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+
+    <div id="modal">
+        <div id="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Uploaded Files</h2>
+            <!-- Display uploaded files here -->
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById('modal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        function goToHomePage() {
+            // Redirect to the home page or perform other home-related actions
+            alert("Redirecting to the home page...");
+        }
+
+        function openFileInput() {
+            // Redirect to the student.html page
+            window.location.href = 'student.html';
+        }
+
+        // Close modal if clicked outside of the modal content
+        window.onclick = function(event) {
+            var modal = document.getElementById('modal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+
+</body>
+</html>

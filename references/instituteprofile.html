@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institute Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #001730;
+        }
+
+        header {
+            background-color:#4AD7D1 ;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+        }
+
+        #logo {
+            max-width: 100px;
+            max-height: 100px;
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        #home-btn, #upload-btn {
+            background-color:#4285f4;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #home-btn {
+            position: absolute;
+            left: 20px;
+        }
+
+        #upload-btn {
+            position: absolute;
+            right: 20px;
+        }
+
+        #institute-name {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        #description {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        section {
+            text-align: center;
+            padding: 20px;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow:#4AD7D1 ;
+            background-color: #fff;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4AD7D1;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .upload-btn {
+            background-color:#4285f4;
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+            text-decoration: none;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        #file-input {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <button id="home-btn" onclick="location.href='index.html'" style="color:black;">Home</button>
+        <img id="logo" src="your_logo.png" alt="Institute Logo" style="color:black;">
+        <button id="upload-btn" onclick="location.href='institute.html'" style="color:black;">Upload Projects</button>
+        <h1 id="institute-name" style="color:black;">Your Institute Name</h1>
+        <p id="description" style="color:black;">Description of your institute goes here.</p>
+    </header>
+
+    <section>
+        <h2 style="color:#ff5722">Project Information</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th style="color:black;">Academic Year</th>
+                    <th style="color:black;">Date Submission</th>
+                    <th style="color:black;">View Uploaded Files</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Add your data dynamically here -->
+                <tr>
+                    <td>2022-2023</td>
+                    <td>2023-01-01</td>
+                    <td>
+                        <button class="upload-btn" onclick="openFileWindow()" style="color:black;">Upload Files</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2022-2023</td>
+                    <td>2023-02-15</td>
+                    <td>
+                        <button class="upload-btn" onclick="openFileWindow()" style="color:black;">Upload Files</button>
+                    </td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </section>
+
+    <script>
+        function openFileWindow() {
+            var fileWindow = window.open('', 'Uploaded Files', 'width=600,height=400');
+            fileWindow.document.write('<h2>Uploaded Files</h2>');
+            fileWindow.document.write('<ul>');
+
+            // You can add logic here to fetch and display the uploaded files for the selected academic year
+
+            fileWindow.document.write('</ul>');
+        }
+    </script>
+
+</body>
+</html>

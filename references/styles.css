@@ -1,0 +1,119 @@
+/* Reset some default styles */
+ body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Add this CSS for horizontal scrolling */
+        .featured-projects {
+            display: flex;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .project {
+            flex: 0 0 auto;
+            margin-right: 20px; /* Adjust as needed for spacing between projects */
+        }
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the header section */
+header {
+    background-color: #EE7879;
+    color: #00000;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.nav-menu ul {
+    list-style-type: none;
+}
+
+.nav-menu li {
+    display: inline;
+    margin-right: 50px;
+    font-weight: bold;
+}
+
+/* Style the hero section */
+.hero {
+    background-color:#CAE7DF;
+    background-size: cover;
+    color:black;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2A3166;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Style the featured projects section */
+.featured-projects {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+}
+
+.project {
+    width: 30%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* ... (continue styling for other sections) */
+
+/* Style the footer section */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* ... (style social media links, contact info, copyright, etc.) */
+
+/* Responsive design for mobile devices (media queries) */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+
+    /* ... (add responsive styles for other elements) */
+}

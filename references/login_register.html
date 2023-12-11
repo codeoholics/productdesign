@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login and Register</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      height: 100vh;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; /* Center content vertically */
+      background-color:#001730 ;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      
+    }
+
+    .buttons-container {
+      display: flex;
+      flex-direction: column;
+      /* align-items: center; */
+      margin-top: auto; /* Push to the bottom initially */
+    }
+
+    button {
+      width: 200px; /* Increased width */
+      height: 60px; /* Increased height */
+      background-color: #4285f4;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 10px;
+      margin-bottom: 20px; /* Moved slightly down */
+    }
+
+    iframe {
+      width: 70%;
+      height: 50vh;
+      border: none;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+
+    /* Additional styles for the sign-in options */
+    .sign-in-options {
+      margin-top: 20px;
+    }
+
+    .sign-in-options button {
+      margin-right: 10px;
+    }
+
+    /* Hide sign-in options initially */
+    .sign-in-options {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="buttons-container">
+    <button onclick="loadLogin()">Login</button>
+    <button onclick="loadRegister()">Register</button>
+  </div>
+  
+  <iframe src="" name="login_register"></iframe>
+
+  <!-- Sign-in options -->
+  <div class="sign-in-options">
+    <!-- Add an ID to the Google Sign-In button -->
+    <button id="google-signin-button" onclick="openGoogleSignIn()">Sign In with Google</button>
+    <button onclick="openLinkedInSignIn()">Sign In with LinkedIn</button>
+  </div>
+
+  <!-- Include the Google API script -->
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script>
+    function loadLogin() {
+      document.querySelector('iframe').src = './login.html';
+      showSignInOptions();
+    }
+
+    function loadRegister() {
+      document.querySelector('iframe').src = './register.html';
+      showSignInOptions();
+    }
+
+    function showSignInOptions() {
+      document.querySelector('.sign-in-options').style.display = 'block';
+      document.querySelector('.buttons-container').style.marginTop = '20px'; // Move buttons to the top
+    }
+
+    function openGoogleSignIn() {
+      gapi.load('auth2', function() {
+        gapi.auth2.init({
+          client_id: '259388763784-e5otvq26m8eftqb4faiocisbs5el6ql7.apps.googleusercontent.com', // Replace with your Google API client ID
+        }).then(function() {
+          var auth2 = gapi.auth2.getAuthInstance();
+
+          // Attach click event to the sign-in button
+          auth2.attachClickHandler(document.getElementById('google-signin-button'), {}, function(googleUser) {
+            // Get the list of Google accounts
+            var googleAccounts = googleUser.getBasicProfile().getEmail();
+            
+            // Display Google emails in the new window
+            var googleWindow = window.open('', '_blank');
+            googleWindow.document.write('<h3>Sign In with Google</h3>');
+            googleWindow.document.write('<p>' + googleAccounts + '</p>');
+          });
+        });
+      });
+    }
+
+    function openLinkedInSignIn() {
+      // For simplicity, opening a new window with a LinkedIn sign-in form
+      var linkedInWindow = window.open('', '_blank');
+
+      // Display LinkedIn sign-in form in the new window
+      linkedInWindow.document.write('<h3>Sign In with LinkedIn</h3>');
+      linkedInWindow.document.write('<form>');
+      linkedInWindow.document.write('<label for="linkedinEmail">Email:</label>');
+      linkedInWindow.document.write('<input type="email" id="linkedinEmail" required>',"<br><br>");
+      linkedInWindow.document.write('<label for="linkedinPassword">Password:</label>');
+      linkedInWindow.document.write('<input type="password" id="linkedinPassword" required>',"<br><br>");
+      linkedInWindow.document.write('<button type="submit">Sign In</button>');
+      linkedInWindow.document.write('</form>');
+    }
+  </script>
+</body>
+</html>

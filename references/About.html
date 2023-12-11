@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #001730; /* Light Gray Background */
+            color: white; /* Dark Text Color */
+        }
+header {
+            background-color: #001730; /* Dark blue background */
+            padding: 10px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #4AD7D1; /* Turquoise logo color */
+            font-size: 22px;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+        }
+
+     /* Add this to your existing styles for the header */
+.nav-menu a {
+    text-decoration: none;
+    color: #4AD7D1; /* Turquoise text color */
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 20px; /* Adjust this value to control the space between items */
+}
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 20px;
+            padding: 5px;
+        }
+
+        .search-bar input {
+            border: none;
+            outline: none;
+            padding: 5px;
+            border-radius: 20px;
+        }
+
+        .search-button {
+            background-color: #4285f4; /* Turquoise search button color */
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        .sign-in-button {
+            background-color: #4285f4; /* Turquoise sign-in button color */
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+
+        /* About Us Section */
+        .about-us {
+            padding: 50px 0;
+            text-align: center;
+            background-color: #4AD7D1;
+            color: #001730; 
+        }
+
+        .about-us-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .project-name {
+            font-weight: bold;
+        }
+
+        .about-description {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            color: #ff5722; /* Red Highlight Color */
+            font-weight: bold;
+        }
+
+        .about-features {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+            flex-wrap: wrap; /* Allow features to wrap on smaller screens */
+        }
+
+        .feature {
+            flex: 1;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            margin: 10px;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature img {
+            max-width: 60px;
+            margin-bottom: 10px;
+        }
+
+        .feature h3 {
+            color: #2c3e50;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .feature-description {
+            color: #7f8c8d; /* Gray Feature Description */
+            font-size: 16px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #ff5722; /* Red CTA Button Color */
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background-color: #c0392b; /* Darker Red Hover Color */
+        }
+/* Footer Section */
+        footer {
+            background-color: #001730; /* Dark blue footer background */
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .social-media-links img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+    </style>
+    <title>Project Nexus</title>
+</head>
+<header>
+    <img src="logo.png" width="130" height="70">
+    <ul class="nav-menu">
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="Projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <div class="search-bar">
+        <input type="text" placeholder="Search...">
+        <button class="search-button">Search</button>
+    </div>
+    <button class="sign-in-button">Sign In / Register</button>
+</header>
+
+
+<body>
+    <!-- About Us Section -->
+    <section class="about-us">
+        <div class="about-us-content">
+            <h2>About Us</h2>
+            <p class="about-description">
+                Welcome to <span class="project-name">Project Nexus</span> – a catalyst for innovation and collaborative learning in the world of education. 🚀</p>
+            <p class="about-description">
+                At Project Nexus, we believe that education should be a hub of creativity and knowledge sharing. Our journey began with a vision to empower students and revolutionize the way they learn and innovate.</p>
+            <p class="about-description">
+                🌟 <span class="highlight">Our Mission:</span> To bridge the gap between students, universities, and the world of innovation, turning academic projects into powerful assets.</p>
+            <p class="about-description">
+                🚀 <span class="highlight">Our Vision:</span> To fuel India's knowledge growth and inspire a new generation of innovators.</p>
+
+            <div class="about-features">
+                <div class="feature">
+                    <img src="pro.jpg" alt="Innovative Projects">
+                    <h3>Innovative Projects</h3>
+                    <p class="feature-description">Explore a wide range of groundbreaking student projects.</p>
+                </div>
+                <div class="feature">
+                    <img src="collab.jpg" alt="Collaboration">
+                    <h3>Collaboration</h3>
+                    <p class="feature-description">Connect and collaborate with students from diverse backgrounds.</p>
+                </div>
+                <div class="feature">
+                    <img src="plag.png" alt="Plagiarism Prevention">
+                    <h3>Plagiarism Prevention</h3>
+                    <p class="feature-description">Our advanced tools ensure the authenticity of every project.</p>
+                </div>
+                <div class="feature">
+                    <img src="comm.jpg" alt="Inspiring Community">
+                    <h3>Inspiring Community</h3>
+                    <p class="feature-description">Be part of an inspiring community that values creativity and knowledge sharing.</p>
+                </div>
+                <!-- Add more features as needed -->
+            </div>
+        </div>
+        <a href="#" class="cta-button">Learn More</a>
+    </section>
+<!-- Footer Section -->
+    <footer>
+        <div class="social-media-links">
+            <a href="#"><img src="facebook.png" width="30" height="30" alt="Facebook"></a>
+            <a href="#"><img src="twitter.png" width="26" height="26" alt="Twitter"></a>
+            <a href="#"><img src="linkedin.png" width="29" height="29" alt="LinkedIn"></a>
+        </div>
+        <div class="footer-links">
+            <a href="#">Nexus Business</a>
+            <a href="#">Get the App</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Terms</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Project Nexus. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

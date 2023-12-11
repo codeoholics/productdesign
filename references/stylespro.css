@@ -1,0 +1,62 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.bg-container  {
+    background-color :#001730;
+    background-size: cover;
+}
+
+.Projects-bg-container {
+    height:92vh;
+    width:80vw;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #4AD7D1;
+    border-radius: 8px;
+    
+}
+
+.Projects-heading {
+    text-align: center;
+    color: #ff5722;
+}
+
+.Projects-card-container {
+    width:78vw; 
+    height: 20vh;
+    cursor: pointer;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.Projects-card-container:hover {
+    background-color: #ccc;
+}
+
+.Projects-card-heading {
+    color: #ff5722;
+}
+
+.Projects-card-description {
+    color: black;
+}
+
+.btn-dark {
+    background-color: #4285f4;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-dark:hover {
+    background-color: #555;
+}
+

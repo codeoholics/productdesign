@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color:#4AD7D1;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      display: flex;
+      justify-content: space-between;
+      max-width: 800px; /* Adjusted max-width */
+    }
+
+    .login-form {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 45%;
+      color: #fff;
+    }
+
+    .login-form h2 {
+      margin-bottom: 20px;
+    }
+
+    .login-form .form-group {
+      margin-bottom: 15px;
+    }
+
+    .login-form label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .login-form input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .login-form button {
+      width: 100%;
+      padding: 10px;
+      background-color:#4285f4;
+      color:white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    /* Added spacing between forms */
+    .login-form:first-child {
+      margin-right: 20px;
+    }
+
+    .login-form:last-child {
+      margin-left: 20px;
+    }
+
+    
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-form" id="institutionRegistrationForm">
+      <h2 style="color:black;">Institution Registration</h2>
+      <div class="form-group">
+        <label for="institutionName" style="color:black;">Institution Name:</label>
+        <input type="text" id="institutionName" placeholder="Enter institution name">
+      </div>
+      <div class="form-group">
+        <label for="institutionPassword" style="color:black;">Password:</label>
+        <input type="password" id="institutionPassword" placeholder="Enter password">
+      </div>
+      <button onclick="institutionRegister()">Register</button>
+    </div>
+
+    <div class="login-form" id="studentRegistrationForm">
+      <h2 style="color:black;">Student Registration</h2>
+      <div class="form-group">
+        <label for="studentName" style="color:black;">Student Name:</label>
+        <input type="text" id="studentName" placeholder="Enter student name">
+      </div>
+      <div class="form-group">
+        <label for="studentPassword" style="color:black;">Password:</label>
+        <input type="password" id="studentPassword" placeholder="Enter password">
+      </div>
+      <button onclick="studentRegister()">Register</button>
+    </div>
+  </div>
+
+  <script>
+    function institutionRegister() {
+      var institutionName = document.getElementById("institutionName").value;
+      var institutionPassword = document.getElementById("institutionPassword").value;
+
+      // Add your registration logic for institutions here
+      // For simplicity, let's just display an alert
+      alert("Institution Registration\nName: " + institutionName + "\nPassword: " + institutionPassword);
+    }
+
+    function studentRegister() {
+      var studentName = document.getElementById("studentName").value;
+      var studentPassword = document.getElementById("studentPassword").value;
+
+      // Add your registration logic for students here
+      // For simplicity, let's just display an alert
+      alert("Student Registration\nName: " + studentName + "\nPassword: " + studentPassword);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles1.css">
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <title>Project 1 Details</title>
+</head>
+<body>
+<div class="bg-container">
+    <div class="DetailedView-container">
+        <!-- Project 1 Detailed View -->
+        <h1 class="DetailedView-heading">SMART HEALTH TRACKER</h1>
+
+        <!-- Owl Carousel Container -->
+        <div class="Carousel-container owl-carousel">
+            <div class="item"><img src="https://tse4.mm.bing.net/th?id=OIP.nGCu9Gf992CxXe8e74Y3ZwHaJR&pid=Api&P=0&h=220" alt="Project 1 Image 1" style="width: 20%; height: 50%;"></div>
+            <div class="item"><img src="https://tse4.mm.bing.net/th?id=OIP.nGCu9Gf992CxXe8e74Y3ZwHaJR&pid=Api&P=0&h=220" alt="Project 1 Image 2" style="width: 20%; height: 50%;"></div>
+            <!-- Add more items as needed -->
+        </div>
+
+        <p class="DetailedView-description">
+           SmartHealth Tracker is a comprehensive health monitoring system designed to revolutionize personal well-being. The software seamlessly integrates with wearable devices, collecting real-time data on vital signs, activity levels, and sleep patterns. Utilizing advanced analytics and machine learning algorithms, it provides personalized health insights, proactive wellness suggestions, and early detection of potential health issues. The user-friendly interface allows individuals to track their progress, set fitness goals, and engage in a community for support.  </p>
+
+         <p class="DetailedView-student-details">Student Name: Abcdef</p>
+         <p class="DetailedView-student-details">Student mail id: abcd@gmail.com</p>
+         <button class="button" onclick="goBack()">Back</button>
+
+         <button class="btn btn-dark" >View Project</button>         
+
+         <button class="btn-dark" onclick="collaborate()">Collaborate</button>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            // Initialize Owl Carousel
+            $(".Carousel-container").owlCarousel({
+                items: 1,  // Number of items to display
+                loop: true, // Enable loop
+                autoplay: true, // Enable autoplay
+                autoplayTimeout: 3000, // Autoplay interval in milliseconds
+                nav: true, // Display navigation arrows
+                dots: true // Display navigation dots
+            });
+        });
+
+        function goBack() {
+            // Navigate back to the previous page
+            history.back();
+        }
+
+        function collaborate() {
+            // Implement collaboration logic here
+            alert("Collaborate button clicked!");
+        }
+    </script>
+</body>
+</html>
